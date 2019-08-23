@@ -1,5 +1,5 @@
 
-import Task from "../models/List.js";
+import Task from "../Models/List.js";
 
 //Private
 let _state = {
