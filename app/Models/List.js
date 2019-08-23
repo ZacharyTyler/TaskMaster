@@ -17,7 +17,8 @@ export default class Task {
                 <button class="btn btn-danger" onclick="app.controllers.listController.deleteName(${index})">x
                 </button></div></div>
                 <hr>
-                <ul>`
+                <ul>
+                `
                 template += this.drawLists(index)
                 template += `</ul>
             <div class="row">
@@ -27,9 +28,10 @@ export default class Task {
                 <label for="list"></label>
                 <input type="text" class="form-control" name="list" placeholder="List Item" required>
                 </div>
-                <button class="btn btn-success justify-self-center" type="submit">Add</button>
+                <div class="justify-content-center d-flex">
+                <button class="btn btn-success" type="submit">Add</button>
               </form>
-              <br>
+              </div>
               </div>
             </div>
             </div>`
@@ -45,8 +47,8 @@ export default class Task {
                 <h4>${list}
                 <span class="badge border border-danger" onclick="app.controllers.listController.deleteList(${taskIndex}, ${listIndex})">x</span></h4>
             
-        </li>
-      </div>`
+        </li></div>
+      `
     })
     return listTemplate
 }
