@@ -7,14 +7,16 @@ export default class Task {
 
     getTemplate(index) {
         let template =
-            `<div class="col-3 border">
-            <div class="row justify-content-center text-center">
+            `<div class="col-3 border mx-2 my-2">
+            <div class="row justify-content-center text-center pl-5">
             <div class="col-10">
+            <br>
                 <h2>${this.name}</h2>
                 </div>
                 <div class="col-2 align-items-center d-flex">
                 <button class="btn btn-danger" onclick="app.controllers.listController.deleteName(${index})">x
                 </button></div></div>
+                <hr>
                 <ul>`
                 template += this.drawLists(index)
                 template += `</ul>
@@ -25,7 +27,7 @@ export default class Task {
                 <label for="list"></label>
                 <input type="text" class="form-control" name="list" placeholder="List Item" required>
                 </div>
-                <button class="btn btn-success" type="submit">Add</button>
+                <button class="btn btn-success justify-self-center" type="submit">Add</button>
               </form>
               <br>
               </div>
@@ -41,7 +43,7 @@ export default class Task {
         
         <li>
                 <h4>${list}
-                <span class="badge" onclick="app.controllers.listController.deleteList(${taskIndex}, ${listIndex})">x</span></h4>
+                <span class="badge border border-danger" onclick="app.controllers.listController.deleteList(${taskIndex}, ${listIndex})">x</span></h4>
             
         </li>
       </div>`

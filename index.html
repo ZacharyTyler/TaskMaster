@@ -13,15 +13,25 @@
 <body>
 
     <div class="container-fluid">
-        <form onsubmit="app.controllers.listController.addName(event)">
-            <div class="form-group">
-                <label for="name">Name your list</label>
-                <input type="text" class="form-control" name="name" placeholder="List name" required>
+        <div class="row text-center justify-content-center">
+            <div class="col-12">
+                <br>
+                <h1>Create a To-Do List</h1>
+                <hr><br>
             </div>
-            <button class="btn btn-primary" type="submit">Submit</button>
-        </form>
-        <br>
-        <div id="name" class="row">
+            <form onsubmit="app.controllers.listController.addName(event)">
+                <div class="form-group">
+                    <label for="name">
+                        <h3>Name your list:</h3>
+                    </label>
+                    <input type="text" class="form-control text-center" name="name" placeholder="List name" required>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+                <br><br><br>
+            </form>
+
+        </div>
+        <div id="name" class="row justify-content-center">
 
         </div>
 
