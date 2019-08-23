@@ -10,11 +10,15 @@ let _state = {
 //Public
 export default class ValuesService {
     deleteName(index) {
-        _state.lists.splice(index, 1)
+        if (confirm("Are you sure you want to delete this item?") == true) {
+            _state.lists.splice(index, 1)
+        }
         this.saveLists()
     }
     deleteList(taskIndex, listIndex) {
-        _state.lists[taskIndex].list.splice(listIndex, 1)
+        if (confirm("Are you sure you want to delete this item?") == true) {
+            _state.lists[taskIndex].list.splice(listIndex, 1)
+        }
         this.saveLists()
     }
     addList(newList, index) {
