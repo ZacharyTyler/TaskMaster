@@ -12,6 +12,20 @@
 
 <body>
 
+    <div class="container">
+        <form onsubmit="app.controllers.listController.addName(event)">
+            <div class="form-group">
+                <label for="name">Name your list</label>
+                <input type="text" class="form-control" name="name" placeholder="List name" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        <div id="name" class="row">
+
+        </div>
+
+    </div>
+
 
     <script src="app/main.js" type="module"></script>
 </body>
